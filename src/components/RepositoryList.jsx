@@ -56,12 +56,12 @@ const repositories = [
 ]
 
 const RepositoryList = () => (
-    <FlatList
-      data={repositories}
-      ItemSeparatorComponent={() => <View style={styles.separator} />}
-      renderItem={({item}) => <RepositoryItem item={item} /> }
-      keyExtractor={item => item.id}
-    />
+  <FlatList
+    data={repositories}
+    ItemSeparatorComponent={() => <View style={styles.separator} />}
+    renderItem={({item}) => <RepositoryItem item={item} /> }
+    keyExtractor={item => item.id}
+  />
 )
 
 export default RepositoryList
