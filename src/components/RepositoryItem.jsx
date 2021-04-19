@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
 })
 
 const RespositoryItem = ({ item }) => {
-  const { ownerAvatarUrl, fullName, description, language, stargazersCount, forksCount, reviewCount, ratingAverage } = item
+  const { ownerAvatarUrl, fullName, description, language, stargazersCount, forksCount, reviews, ratingAverage } = item
 
   return (
     <View style={styles.container}>
@@ -65,7 +65,7 @@ const RespositoryItem = ({ item }) => {
           <NativeText>Forks</NativeText>
         </View>
         <View style={{alignItems:'center'}}>
-          <Text fontWeight='bold'>{reviewCount}</Text>
+          <Text fontWeight='bold'>{reviews.totalCount}</Text>
           <NativeText>Reviews</NativeText>
         </View>
         <View style={{alignItems:'center'}}>
