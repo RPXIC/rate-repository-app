@@ -1,16 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-native'
-import Text from './Text'
+import Text from 'components/Text/Text'
 
 const AppBarTab = ({ path, text }) => (
   <Link to={path}>
-    <Text 
-      color='navbar' 
-      fontSize='subheading' 
+    <Text
+      color='navbar'
+      fontSize='subheading'
       fontWeight='bold'
       padding='navbar'
     >
-    {text}</Text>
+      {text}</Text>
   </Link>
 )
 

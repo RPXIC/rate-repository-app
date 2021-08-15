@@ -8,4 +8,4 @@ const numFormatter = num => {
   }
 }
 
-export { numFormatter }
+export default numFormatter

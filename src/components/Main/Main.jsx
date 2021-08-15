@@ -1,19 +1,11 @@
 import React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { View } from 'react-native'
 import { Route, Switch, Redirect } from 'react-router-native'
-import AppBar from './AppBar'
-import RepositoryList from './RepositoryList'
-import SignIn from './SignIn'
-import SignOut from './SignOut'
-import theme from '../theme'
-
-const styles = StyleSheet.create({
-  container: {
-    flexGrow: 1,
-    flexShrink: 1,
-    backgroundColor: theme.colors.bgMain
-  },
-})
+import AppBar from 'components/AppBar/AppBar'
+import RepositoryList from 'components/RepositoryList/RepositoryList'
+import SignIn from 'components/SignIn/SignIn'
+import SignOut from 'components/SignOut/SignOut'
+import { styles } from './styles'
 
 const Main = () => {
   return (

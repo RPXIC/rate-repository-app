@@ -1,19 +1,8 @@
 import React from 'react'
-import { StyleSheet } from 'react-native'
 import { useField } from 'formik'
-import TextInput from './TextInput'
-import Text from './Text'
-
-const styles = StyleSheet.create({
-  errorText: {
-    marginTop: 5,
-    marginLeft: 25,
-    color: '#d73a4a'
-  },
-  errorInput: {
-    borderColor: '#d73a4a'
-  }
-})
+import Text from 'components/Text/Text'
+import TextInput from 'components/TextInput/TextInput'
+import { styles } from './styles'
 
 const FormikTextInput = ({ name, ...props }) => {
   const [field, meta, helpers] = useField(name)
