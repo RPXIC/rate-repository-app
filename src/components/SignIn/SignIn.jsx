@@ -13,7 +13,6 @@ const SignIn = () => {
   const history = useHistory()
 
   const handleFormikSubmit = async (values, actions) => {
-    console.log('iep')
     actions.setSubmitting(true)
     try {
       const { username, password } = values
