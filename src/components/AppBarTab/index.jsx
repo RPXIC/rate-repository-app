@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-native'
-import Text from 'components/Text/Text'
+import Text from 'components/Text'
 
 const AppBarTab = ({ path, text }) => (
   <Link to={path}>

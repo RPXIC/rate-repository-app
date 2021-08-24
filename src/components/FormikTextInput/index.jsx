@@ -1,7 +1,7 @@
 import React from 'react'
 import { useField } from 'formik'
-import Text from 'components/Text/Text'
-import TextInput from 'components/TextInput/TextInput'
+import Text from 'components/Text'
+import TextInput from 'components/TextInput'
 import { styles } from './styles'
 
 const FormikTextInput = ({ name, ...props }) => {

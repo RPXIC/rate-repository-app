@@ -30,5 +30,17 @@ export const styles = StyleSheet.create({
     paddingVertical: 5,
     textAlign: 'center',
     borderRadius: 5,
+  },
+  button: {
+    backgroundColor: '#016ad1',
+    paddingVertical: 15,
+    borderRadius: 5,
+    marginTop: 15,
+    marginBottom: 5
+  },
+  buttonText: {
+    textAlign: 'center',
+    color: '#ffffff',
+    fontWeight: '700',
   }
 })

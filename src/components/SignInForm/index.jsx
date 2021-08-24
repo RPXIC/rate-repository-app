@@ -2,8 +2,8 @@ import React from 'react'
 import { Pressable, View } from 'react-native'
 import { Formik } from 'formik'
 import * as yup from 'yup'
-import FormikTextInput from 'components/FormikTextInput/FormikTextInput'
-import Text from 'components/Text/Text'
+import FormikTextInput from 'components/FormikTextInput'
+import Text from 'components/Text'
 import { styles } from './styles'
 
 const initialValues = {

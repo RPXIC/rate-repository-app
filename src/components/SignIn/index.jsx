@@ -1,6 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router'
-import SignInForm from '../SignInForm/SignInForm'
+import SignInForm from '../SignInForm'
 import { useSignIn } from 'hooks'
 
 const FORM_STATUS = {

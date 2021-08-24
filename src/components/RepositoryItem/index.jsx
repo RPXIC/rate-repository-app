@@ -1,12 +1,13 @@
 import React from 'react'
-import { Image, Text as NativeText, View } from 'react-native'
-import Text from 'components/Text/Text'
+import { Image, Pressable, Text as NativeText, View } from 'react-native'
+import * as WebBrowser from 'expo-web-browser';
+import Text from 'components/Text'
 import theme from 'theme'
 import { numFormatter } from 'utils'
 import { styles } from './styles'
 
-const RepositoryItem = ({ item }) => {
-  const { ownerAvatarUrl, fullName, description, language, stargazersCount, forksCount, reviews, ratingAverage } = item
+const RepositoryItem = ({ item, details }) => {
+  const { ownerAvatarUrl, fullName, description, language, stargazersCount, forksCount, reviews, ratingAverage, url } = item
 
   return (
     <View testID='name' style={styles.container}>
@@ -42,6 +43,13 @@ const RepositoryItem = ({ item }) => {
           <NativeText>Rating</NativeText>
         </View>
       </View>
+      {details && (
+        <View style={styles.button}>
+          <Pressable onPress={() => WebBrowser.openBrowserAsync(url)}>
+            <Text style={styles.buttonText}>Open in GitHub</Text>
+          </Pressable>
+        </View>
+      )}
     </View>
   )
 }

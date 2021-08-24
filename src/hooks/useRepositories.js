@@ -2,7 +2,7 @@ import { useQuery } from '@apollo/client'
 import { GET_REPOSITORIES } from '../graphql/queries'
 
 const useRepositories = (variables) => {
-  const { data = {}, loading, refetch, fetchMore } = useQuery(GET_REPOSITORIES, {
+  const { data = {}, loading, fetchMore } = useQuery(GET_REPOSITORIES, {
     fetchPolicy: 'cache-and-network',
     variables
   })
@@ -43,7 +43,6 @@ const useRepositories = (variables) => {
     fetchMore: handleFetchMore,
     loading,
     repositories: repositoriesNodes,
-    refetch
   }
 }
 
