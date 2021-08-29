@@ -9,34 +9,20 @@ const useRepositories = (variables) => {
 
   const handleFetchMore = () => {
     const canFetchMore =
-      !loading && data && data.repositories.pageInfo.hasNextPage
+      !loading && data?.repositories.pageInfo.hasNextPage
 
     if (!canFetchMore) return
 
     fetchMore({
-      query: GET_REPOSITORIES,
       variables: {
         after: data.repositories.pageInfo.endCursor,
-        ...variables
+        ...variables,
       },
-      updateQuery: (previousData, { fetchMoreResult }) => {
-        return {
-          repositories: {
-            ...fetchMoreResult.repositories,
-            edges: [
-              ...previousData.repositories.edges,
-              ...fetchMoreResult.repositories.edges
-            ]
-          }
-        }
-      }
-    })
+    });
   }
 
-  const { repositories = null } = data
-
-  const repositoriesNodes = repositories
-    ? repositories.edges.map(edge => edge.node)
+  const repositoriesNodes = data?.repositories
+    ? data.repositories.edges.map(edge => edge.node)
     : []
 
   return {

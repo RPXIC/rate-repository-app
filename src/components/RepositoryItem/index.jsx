@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { Image, Pressable, Text as NativeText, View } from 'react-native'
 import * as WebBrowser from 'expo-web-browser';
 import Text from 'components/Text'
@@ -54,4 +54,4 @@ const RepositoryItem = ({ item, details }) => {
   )
 }
 
-export default RepositoryItem
+export default memo(RepositoryItem)

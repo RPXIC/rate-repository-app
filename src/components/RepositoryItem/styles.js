@@ -9,10 +9,11 @@ export const styles = StyleSheet.create({
   top: {
     flexDirection: 'row',
     justifyContent: 'flex-start',
-    paddingHorizontal: 10,
   },
   topText: {
-    marginHorizontal: 15,
+    marginLeft: 15,
+    marginRight: 5,
+    flex: 1
   },
   bottom: {
     flexDirection: 'row',

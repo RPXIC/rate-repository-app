@@ -15,6 +15,7 @@ const AppBar = () => {
           ? (
             <>
               <AppBarTab path='/create-review' text='Create Review' />
+              <AppBarTab path='/my-reviews' text='My Reviews' />
               <AppBarTab path='/signout' text='Sign out' />
             </>
           )

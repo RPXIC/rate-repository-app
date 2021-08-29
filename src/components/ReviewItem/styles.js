@@ -27,5 +27,21 @@ export const styles = StyleSheet.create({
     height: 50,
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  actionsContainer: {
+    flexDirection: 'row'
+  },
+  viewPressable: {
+    marginRight: 6,
+    marginTop: 6,
+    backgroundColor: '#0165d4',
+  },
+  deletePressable: {
+    marginTop: 6,
+    backgroundColor: '#d6394c',
+  },
+  text: {
+    color: '#fff',
+    margin: 8
   }
 })

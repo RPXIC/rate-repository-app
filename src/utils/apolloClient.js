@@ -1,11 +1,27 @@
 import { ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client'
 import Constants from 'expo-constants'
 import { setContext } from '@apollo/client/link/context';
+import { relayStylePagination } from '@apollo/client/utilities';
 import authStorage from './authStorage';
 
 const httpLink = createHttpLink({
   uri: `${Constants.manifest.extra.env}/graphql`,
 })
+
+const cache = new InMemoryCache({
+  typePolicies: {
+    Query: {
+      fields: {
+        repositories: relayStylePagination(),
+      }
+    },
+    Repository: {
+      fields: {
+        reviews: relayStylePagination(),
+      }
+    },
+  },
+});
 
 const authLink = setContext(async (_, { headers }) => {
   try {
@@ -24,7 +40,7 @@ const authLink = setContext(async (_, { headers }) => {
 const createApolloClient = () => {
   return new ApolloClient({
     link: authLink.concat(httpLink),
-    cache: new InMemoryCache()
+    cache
   })
 }
 
